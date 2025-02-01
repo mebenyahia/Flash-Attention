@@ -56,7 +56,7 @@ flash-transformer/
 │   │   ├── training_curves.py # Training loss/accuracy plots
 │   │   └── embedding_visuals.py # Token embedding visualization
 ├── notebooks/
-│   ├── demo.ipynb           # >> demo notebook
+│   ├── demo.ipynb           # >> Demo notebook
 │   ├── exploration.ipynb    # Analysis & visualization notebook
 ├── scripts/
 │   ├── train.sh             # Training script
@@ -125,7 +125,7 @@ Alternatively, locally, you can run the code using shell scripts:
 ## Methodology
 
 ### FlashAttention
-Instead of computing the full \( N \times N \) attention matrix, FlashAttention computes attention in a block-wise, memory-efficient manner, especially for long sequences. More details can be found in [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135).
+Instead of computing the full  N × N attention matrix, FlashAttention computes attention in a block-wise, memory-efficient manner, especially for long sequences. More details can be found in [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/abs/2205.14135).
 
 ### Mixed-Precision Training
 Using PyTorch AMP, the model executes many computations in FP16.
