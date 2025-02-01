@@ -2,7 +2,7 @@
 
 ![Description](https://tfwiki.net/mediawiki/images2/a/aa/FlashG1-card.jpg)
 
-Flash-Transformer is a robust, modular repository for training a Transformer-based sequence-to-sequence model for machine translation. This implementation builds upon the original [Attention Is All You Need](https://arxiv.org/abs/1706.03762) paper and introduces **FlashAttention** for fast, memory-efficient attention computation. The model is designed to efficiently handle long sequences and large batch sizes using GPU-optimized kernels and mixed-precision training.
+Flash-Transformer is a repository for training a Transformer-based sequence-to-sequence model for machine translation for the WMT14 dataset. The implementation builds upon the original [Attention Is All You Need](https://arxiv.org/abs/1706.03762) paper and uses **FlashAttention** for fast, memory-efficient attention computation. The model is designed to efficiently handle long sequences and large batch sizes using GPU-optimized kernels and mixed-precision training.
 
 ## Table of Contents
 
@@ -32,7 +32,7 @@ flash-transformer/
 ├── README.md                # Overview and usage instructions
 ├── requirements.txt         # Dependencies
 ├── config/
-│   └── config.yaml          # Centralized configuration
+│   └── config.yaml          # >> To configure pretty much everything
 ├── data/
 │   ├── preprocess.py        # Tokenization & BPE
 │   ├── download_dataset.py  # Download & preprocess WMT 2014 dataset
@@ -50,7 +50,7 @@ flash-transformer/
 │   │   ├── optimizer.py     # Optimizer & scheduler
 │   │   └── regularization.py # Dropout & label smoothing
 │   ├── evaluation/
-│   │   ├── evaluate.py      # BLEU score computation
+│   │   ├── evaluate.py      # BLEU score computation >> uses the max checkpoint defined in the config
 │   │   ├── inference.py     # Translation generation
 │   │   └── metrics.py       # Accuracy metrics
 │   ├── visualization/
